@@ -117,7 +117,7 @@ img{
 }
 .box .icon i{
     opacity: 0;
-    transition-duration: 0.4;
+    transition-duration: 0.4s;
     transform: scale(0);
 }
 
