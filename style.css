@@ -154,27 +154,44 @@ img{
     }
     .rotate{
         width: 200px;
-        height: 100px;
-        background-color: red;
+        height: auto;
+        /* background-color: red; */
         display: inline-block;
-        float:right;
-        /* animation-name:rotate;
+        margin-left: 20px;
+        margin-right: 50px;
+        float: left;
+        animation-name:rotate;
         animation-duration: 4s;
         animation-iteration-count: infinite;
-        animation-direction: alternate-reverse; */
+        animation-direction: alternate-reverse;
     }
-    /* @keyframes rotate{
-        0%{transform: rotate(0deg);}
-        100%{transform: rotate(180deg);}
-        100%{transform: rotate(0deg);}
-        0%{transform: rotate(180deg);}
+    @keyframes rotate{
+        /* 0%{transform: rotate(0deg);} */
+        100%{transform: rotate(220deg);}
+        /* 100%{transform: rotate(deg);}
+        0%{transform: rotate(220deg);} */
 
-    } */
+    }
     
-   /* .animation-function{
-       float:right;
-       flex-direction: row;
-   } */
-
-
+    .skew{
+        width: 200px;
+        height: 200px;
+        float: left;
+        margin-right: 50px;
+        background-color: red;
+        animation-name: skew;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+    @keyframes skew{
+        0%{transform: skew(0deg);}
+        25%{transform: skew(25deg);}
+    }
+    .clearfix::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+   
 
