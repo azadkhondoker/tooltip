@@ -134,6 +134,7 @@ img{
 .icon i:nth-child(3){
     transition-delay:.4s;
 }
+
 .scale{
     width: 400px;
     height: 200px;
@@ -152,6 +153,7 @@ img{
         100%{transform: scale(1);}
         0%{transform: scale(0);}
     }
+
     .rotate{
         width: 200px;
         height: auto;
@@ -165,6 +167,7 @@ img{
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
     }
+
     @keyframes rotate{
         /* 0%{transform: rotate(0deg);} */
         100%{transform: rotate(220deg);}
@@ -184,14 +187,180 @@ img{
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
     }
+
     @keyframes skew{
         0%{transform: skew(0deg);}
         25%{transform: skew(25deg);}
     }
+
     .clearfix::after{
         content: "";
         clear: both;
         display: block;
     }
-   
+    
+    .buttons{
+        text-align: center;
+        margin: 50px 0px;
+
+    }
+
+    .button{
+        text-decoration: none;
+        display: inline-block;
+        margin: 0px 15px;
+        padding: 15px 30px;
+        color: white;
+       background-color: cornflowerblue;
+        cursor:help;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+     }
+
+     .button-one::after {
+        background-color: #0e0e49;
+        position: absolute;
+        content: "";
+        width: 4%;
+        height: 100%;
+        background-color: blueviolet;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition-duration: 0.3s;
+    }
+
+    .button-one:hover:after{
+        width: 100%;
+        height: 100%;
+    }
+
+    .button-two::after {
+        animation-name: two;
+        animation-duration: 0.1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        background-color: #0e0e49;
+        width: 13px;
+        height: 30%;
+        position: absolute;
+        content: "";
+        background-color: blueviolet;
+        top: 0px;
+        left: 0;
+        z-index: -1;
+        transition-duration: 0.3s
+
+    }
+
+    @keyframes two{
+        0%{transform: scale(0);}
+        100%{transform: scale(1);}
+    }
+    
+
+    .button-two:hover:after{
+        width: 100%;
+        height: 100%;
+        /* animation-iteration-count: initial; */
+        animation-direction: normal;
+        
+    }
+
+    .button-three::after {
+        width: 54px;
+        height: 101%;
+        position: absolute;
+        content: "";
+        background-color: blueviolet;
+        transform: rotate(41deg);
+        top:-25px;
+        left: -20px;
+        z-index: -1;
+        transition-duration: 0.3s;
+        opacity: 0%;
+    
+      
+    }
+ 
+    .button-three:hover::after{
+        width: 100%;
+        height: 100%;
+        transform: rotate(0deg);
+        left: 0;
+        top: 0;
+        opacity: 1;
+    } 
+    .button-four::after {
+        background-color: #0e0e49;
+        position: absolute;
+        content: "";
+        width: 0;
+        height:100%;
+        background-color: blueviolet;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition-duration: 0.5s;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .button-four::before{
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        background-color: rgb(38, 10, 163);
+        top: 0;
+        right: 0;
+        z-index: -1;
+        transition-duration: 0.3s;
+        border-radius: 20px 0 0 20px ;
+    }
+
+    .button-four:hover::after{
+        width: 50%;
+        height: 100%;
+        border-radius: 0;
+
+    }
+
+    .button-four:hover::before{
+        width: 50%;
+        height: 100%;
+        border-radius: 0;
+
+    }
+    .button-one1::after {
+        animation-name:one1;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        background-color: #0e0e49;
+        width: 13px;
+        height: 30%;
+        position: absolute;
+        content: "";
+        background-color: blueviolet;
+        top: 0px;
+        left: 0;
+        z-index: -1;
+        transition-duration: 0.3s
+
+    }
+
+    @keyframes one1{
+        100%{transform: skewY(20deg);}
+        0%{transform: skewY(0deg);}
+    }
+    
+
+    .button-one1:hover:after{
+        width: 100%;
+        height: 100%;
+        animation-iteration-count: initial;
+        animation-direction: normal;
+        
+    }
 
